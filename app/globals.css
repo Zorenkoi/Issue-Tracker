@@ -4,24 +4,29 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  .nav-link-active {
+    @apply text-zinc-900 hover:text-zinc-800 transition-colors;
+  }
+  .nav-link {
+    @apply text-zinc-500 hover:text-zinc-800 transition-colors;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 0px 15px;
 }
