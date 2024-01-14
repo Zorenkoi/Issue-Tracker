@@ -33,4 +33,4 @@ export const GET = async (request: NextRequest) => {
   return NextResponse.json(issues);
 };
 
-export const dynamic = "force dynamic";
+export const dynamic = "force-dynamic";
